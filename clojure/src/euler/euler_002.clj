@@ -6,7 +6,6 @@
   ([fst sec]
    (cons (+ fst sec) (lazy-seq (fibonacci-seq sec (+ fst sec))))))
 
-
 (defn solve-euler-002
   []
   (reduce + (filter even? (take-while #(< % 4000000) (fibonacci-seq)))))
